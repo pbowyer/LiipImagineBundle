@@ -71,7 +71,7 @@ class OptiPngPostProcessor extends AbstractPostProcessor
     }
 
     /**
-     * @param string[] $options
+     * @param array<string, string|int|bool> $options
      *
      * @return string[]
      */
@@ -92,15 +92,15 @@ class OptiPngPostProcessor extends AbstractPostProcessor
             $arguments[] = true === $strip ? 'all' : $strip;
         }
 
-        if (isset($options['snip']) && true === $options['snip']) {
+        if (true === $options['snip'] ?? false) {
             $arguments[] = '-snip';
         }
 
-        if (isset($options['preserve_attributes']) && true === $options['preserve_attributes']) {
+        if (true === $options['preserve_attributes'] ?? false) {
             $arguments[] = '-preserve';
         }
 
-        if (isset($options['interlace_type'])) {
+        if (array_key_exists('interlace_type', $options)) {
             if (!\in_array($options['interlace_type'], range(0, 1), true)) {
                 throw new InvalidOptionException('the "interlace_type" option must be either 0 or 1', $options);
             }
@@ -109,19 +109,19 @@ class OptiPngPostProcessor extends AbstractPostProcessor
             $arguments[] = $options['interlace_type'];
         }
 
-        if (isset($options['no_bit_depth_reductions']) && true === $options['no_bit_depth_reductions']) {
+        if (true === $options['no_bit_depth_reductions'] ?? false) {
             $arguments[] = '-nb';
         }
 
-        if (isset($options['no_color_type_reductions']) && true === $options['no_color_type_reductions']) {
+        if (true === $options['no_color_type_reductions'] ?? false) {
             $arguments[] = '-nc';
         }
 
-        if (isset($options['no_palette_reductions']) && true === $options['no_palette_reductions']) {
+        if (true === $options['no_palette_reductions'] ?? false) {
             $arguments[] = '-np';
         }
 
-        if (isset($options['no_reductions']) && true === $options['no_reductions']) {
+        if (true === $options['no_reductions'] ?? false) {
             $arguments[] = '-nx';
         }
 
