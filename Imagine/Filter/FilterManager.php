@@ -60,8 +60,7 @@ class FilterManager
         ImagineInterface $imagine,
         MimeTypeGuesserInterface $mimeTypeGuesser,
         EventDispatcherInterface $dispatcher
-    )
-    {
+    ) {
         $this->filterConfig = $filterConfig;
         $this->imagine = $imagine;
         $this->mimeTypeGuesser = $mimeTypeGuesser;

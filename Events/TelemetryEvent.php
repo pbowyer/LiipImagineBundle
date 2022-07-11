@@ -13,10 +13,10 @@ namespace Liip\ImagineBundle\Events;
 
 class TelemetryEvent extends BCEvent
 {
-    const ON_FILTER_START = 'filter_start';
-    const ON_FILTER_FINISH = 'filter_finish';
-    const ON_POSTPROCESSOR_START = 'postprocess_start';
-    const ON_POSTPROCESSOR_FINISH = 'postprocess_finish';
+    public const ON_FILTER_START = 'filter_start';
+    public const ON_FILTER_FINISH = 'filter_finish';
+    public const ON_POSTPROCESSOR_START = 'postprocess_start';
+    public const ON_POSTPROCESSOR_FINISH = 'postprocess_finish';
     /**
      * @var string
      */
@@ -28,7 +28,6 @@ class TelemetryEvent extends BCEvent
 
     public function __construct(string $name, ?array $options)
     {
-
         $this->name = $name;
         $this->options = $options;
     }

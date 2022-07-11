@@ -11,7 +11,6 @@
 
 namespace Liip\ImagineBundle\Events;
 
-
 class CacheResolveEvent extends BCEvent
 {
     /**

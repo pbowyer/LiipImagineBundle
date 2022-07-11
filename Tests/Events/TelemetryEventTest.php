@@ -11,7 +11,6 @@
 
 namespace Liip\ImagineBundle\Tests\Events;
 
-use Liip\ImagineBundle\Events\CacheResolveEvent;
 use Liip\ImagineBundle\Events\TelemetryEvent;
 use PHPUnit\Framework\TestCase;
 
@@ -41,6 +40,6 @@ class TelemetryEventTest extends TestCase
     {
         $event = new TelemetryEvent('default_path', null);
 
-        $this->assertSame(null, $event->options);
+        $this->assertNull($event->options);
     }
 }
