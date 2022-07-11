@@ -48,7 +48,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $this->createImagineInterfaceMock(),
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
 
         $filterManager->applyFilter($binary, 'thumbnail');
@@ -101,7 +102,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -157,7 +159,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -215,7 +218,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -276,7 +280,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $mimeTypeGuesser
+            $mimeTypeGuesser,
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -342,7 +347,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $mimeTypeGuesser
+            $mimeTypeGuesser,
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -400,7 +406,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -454,7 +461,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -518,7 +526,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagine,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -538,7 +547,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $this->createImagineInterfaceMock(),
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
 
         $filterManager->apply($binary, [
@@ -586,7 +596,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -635,7 +646,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -685,7 +697,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -740,7 +753,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $mimeTypeGuesser
+            $mimeTypeGuesser,
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -798,7 +812,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $mimeTypeGuesser
+            $mimeTypeGuesser,
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -849,7 +864,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -899,7 +915,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
 
@@ -975,7 +992,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
         $filterManager->addLoader('thumbnail', $loader);
         $filterManager->addPostProcessor('foo', $postProcessor);
@@ -1040,7 +1058,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $config,
             $imagineMock,
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
 
         $filterManager->addLoader('thumbnail', $loader);
@@ -1053,7 +1072,8 @@ class FilterManagerTest extends AbstractTest
         $filterManager = new FilterManager(
             $this->createFilterConfigurationMock(),
             $this->createImagineInterfaceMock(),
-            $this->createMimeTypeGuesserInterfaceMock()
+            $this->createMimeTypeGuesserInterfaceMock(),
+            $this->createEventDispatcherInterfaceMock()
         );
 
         $this->assertSame($binary, $filterManager->applyPostProcessors($binary, []));
